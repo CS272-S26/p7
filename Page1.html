@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz with Leaderboard</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+    <div class="box" id="loginBox">
+        <h2>Enter Your Nickname</h2>
+        <input type="text" id="nicknameInput" placeholder="Nickname">
+        <br>
+        <button id="startBtn">Start Quiz</button>
+        <p id="nameError"></p>
+    </div>
+
+    <div class="box" id="quizBox">
+        <h2 id="welcomeText"></h2>
+        <p id="questionText"></p>
+        <div id="choicesBox"></div>
+        <button id="nextBtn">Next</button>
+        <p id="scoreText"></p>
+    </div>
+
+    <div class="box">
+        <h2>Leaderboard</h2>
+        <ol id="leaderboardList"></ol>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

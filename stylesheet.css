@@ -1,97 +1,143 @@
 body {
-  font-family: "Georgia", serif;
-  background-color: #f5f5f5;
-  color: #333;
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    font-family: Georgia, serif;
+    background-color: #dddddd;
+    color: #1f1f1f;
 }
 
 header {
-  background-color: #2a4d69;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  
+    background-color: #2f5577;
+    color: white;
+    text-align: center;
+    padding: 30px 20px 20px 20px;
 }
 
-a.one  {
-  color: white;
-  font-weight: bold;
+header h1 {
+    margin: 0;
+    font-size: 34px;
+    text-decoration: underline;
 }
 
-
-.column {
-  float: left;
-  width: 50%;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-h2, h5 {
-  padding: 20px 20px 10px;
-}
-h3, h4 {
-  font-weight: bold;
-  padding: 20px;
-}
-.two {
-  padding: 6px;
-  text-align: center;
-  
-}
-h6 {
-  font-weight:lighter;
-  font-size:large;
-}
-p {
-  padding: 6px;
-  margin-right: 460px;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
-  display: inline-block;
-  margin: 0 15px;
+nav {
+    margin-top: 18px;
 }
 
 nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 18px;
 }
 
 nav a:hover {
-  color: #fdd835;
-  text-decoration: underline;
-}
-
-img {
-  margin-left: 12px;
-  border-radius: 10px;
+    text-decoration: underline;
 }
 
 main {
-  background-color: white;
-  padding: 20px;
-  margin: 30px auto;
-  width: 80%;
-  max-width: 900px;
-  border-radius: 8px;
+    min-height: 500px;
+    padding: 30px 20px;
+}
+
+.content-box {
+    background-color: #e8e8e8;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 40px 50px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.content-box h2 {
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.content-box p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
 }
 
 footer {
-  background-color: #2a4d69;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  font-size: 0.9em;
+    background-color: #2f5577;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+    font-weight: bold;
+}
+
+/* Quiz page styles */
+input[type="text"] {
+    width: 260px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: Georgia, serif;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 18px;
+    font-size: 16px;
+    font-family: Georgia, serif;
+    cursor: pointer;
+    border: 1px solid #444444;
+    background-color: white;
+}
+
+button:hover {
+    background-color: #dcdcdc;
+}
+
+.choice-btn {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 12px auto;
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #999999;
+    background-color: white;
+    font-size: 16px;
+    font-family: Georgia, serif;
+}
+
+.choice-btn:hover {
+    background-color: #f2f2f2;
+}
+
+.correct {
+    background-color: #cfe9cf;
+}
+
+.wrong {
+    background-color: #efc7c7;
+}
+
+#quizBox {
+    display: none;
+}
+
+#nextBtn {
+    display: none;
+    margin-top: 20px;
+}
+
+#scoreText,
+#nameError {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#leaderboardList {
+    max-width: 300px;
+    margin: 20px auto 0 auto;
+    text-align: left;
+    font-size: 18px;
+    padding-left: 40px;
+}
+
+#choicesBox {
+    margin-top: 25px;
 }
