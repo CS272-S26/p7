@@ -8,8 +8,8 @@ function initNavigation() {
     const header = document.querySelector('header') || document.body;
     if (document.querySelector('.global-nav')) return;
 
-    const currentPath = window.location.pathname.split("/").pop() || 'home.html';
-    const isHomePage = currentPath === 'home.html' || currentPath === '';
+    const currentPath = window.location.pathname.split("/").pop() || 'index.html';
+    const isHomePage = currentPath === 'index.html' || currentPath === '';
 
     let navHTML = '';
 
@@ -17,13 +17,13 @@ function initNavigation() {
         navHTML = `
             <nav class="navbar navbar-expand-lg navbar-dark global-nav">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="home.html">Sports Hub</a>
+                    <a class="navbar-brand" href="index.html">Sports Hub</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav me-auto">
-                            <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="guess.html">Guess Game</a></li>
                             <li class="nav-item"><a class="nav-link" href="moments.html">Moments</a></li>
                             <li class="nav-item"><a class="nav-link" href="Page1.html">Quiz</a></li>
@@ -39,7 +39,7 @@ function initNavigation() {
         navHTML = `
             <nav class="navbar navbar-expand-lg navbar-dark global-nav">
                 <div class="container-fluid">
-                    <a class="btn btn-outline-light" href="home.html">← Back to Home</a>
+                    <a class="btn btn-outline-light" href="index.html">← Back to Home</a>
                     <div class="ms-auto d-flex align-items-center">
                         <button id="themeToggle" class="btn btn-outline-light btn-sm">Toggle Theme</button>
                     </div>
@@ -63,7 +63,7 @@ function initNavigation() {
     highlightActiveLink();
 }
 function highlightActiveLink() {
-    const currentPath = window.location.pathname.split("/").pop() || 'home.html';
+    const currentPath = window.location.pathname.split("/").pop() || 'index.html';
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         if (link.getAttribute('href') === currentPath) {
