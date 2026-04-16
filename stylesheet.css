@@ -4,24 +4,20 @@ body {
     background-color: #dddddd;
     color: #1f1f1f;
 }
-
 header {
     background-color: #2f5577;
     color: white;
     text-align: center;
     padding: 30px 20px 20px 20px;
 }
-
 header h1 {
     margin: 0;
     font-size: 34px;
     text-decoration: underline;
 }
-
 nav {
     margin-top: 18px;
 }
-
 nav a {
     color: white;
     text-decoration: none;
@@ -29,16 +25,13 @@ nav a {
     font-size: 18px;
     margin: 0 18px;
 }
-
 nav a:hover {
     text-decoration: underline;
 }
-
 main {
     min-height: 500px;
     padding: 30px 20px;
 }
-
 .content-box {
     background-color: #e8e8e8;
     max-width: 860px;
@@ -47,19 +40,16 @@ main {
     border-radius: 8px;
     text-align: center;
 }
-
 .content-box h2 {
     font-size: 28px;
     margin-top: 0;
     margin-bottom: 40px;
 }
-
 .content-box p {
     font-size: 18px;
     line-height: 1.8;
     margin-bottom: 40px;
 }
-
 footer {
     background-color: #2f5577;
     color: white;
@@ -67,8 +57,6 @@ footer {
     padding: 45px 20px;
     font-weight: bold;
 }
-
-/* Quiz page styles */
 input[type="text"] {
     width: 260px;
     padding: 10px;
@@ -76,7 +64,6 @@ input[type="text"] {
     font-family: Georgia, serif;
     margin-bottom: 15px;
 }
-
 button {
     padding: 10px 18px;
     font-size: 16px;
@@ -85,11 +72,9 @@ button {
     border: 1px solid #444444;
     background-color: white;
 }
-
 button:hover {
     background-color: #dcdcdc;
 }
-
 .choice-btn {
     display: block;
     width: 100%;
@@ -102,34 +87,27 @@ button:hover {
     font-size: 16px;
     font-family: Georgia, serif;
 }
-
 .choice-btn:hover {
     background-color: #f2f2f2;
 }
-
 .correct {
     background-color: #cfe9cf;
 }
-
 .wrong {
     background-color: #efc7c7;
 }
-
 #quizBox {
     display: none;
 }
-
 #nextBtn {
     display: none;
     margin-top: 20px;
 }
-
 #scoreText,
 #nameError {
     margin-top: 20px;
     font-weight: bold;
 }
-
 #leaderboardList {
     max-width: 300px;
     margin: 20px auto 0 auto;
@@ -137,7 +115,39 @@ button:hover {
     font-size: 18px;
     padding-left: 40px;
 }
-
 #choicesBox {
     margin-top: 25px;
+}
+[data-theme="dark"] {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+}
+[data-theme="dark"] body {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+[data-theme="dark"] .content-box, 
+[data-theme="dark"] .card, 
+[data-theme="dark"] .box {
+    background-color: #1e1e1e !important;
+    color: #e0e0e0 !important;
+    border-color: #333;
+}
+[data-theme="dark"] .navbar {
+    border-bottom: 1px solid #333;
+}
+[data-theme="dark"] button:not(.btn-primary):not(.btn-success) {
+    background-color: #333;
+    color: #fff;
+    border-color: #555;
+}
+[data-theme="dark"] .choice-btn {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+    border-color: #444;
+}
+[data-theme="dark"] input {
+    background-color: #2c2c2c;
+    color: white;
+    border: 1px solid #444;
 }
