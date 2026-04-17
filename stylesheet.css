@@ -3,6 +3,9 @@ body {
     font-family: Georgia, serif;
     background-color: #dddddd;
     color: #1f1f1f;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 header {
     background-color: #2f5577;
@@ -56,6 +59,7 @@ footer {
     text-align: center;
     padding: 45px 20px;
     font-weight: bold;
+    margin-top: auto;
 }
 input[type="text"] {
     width: 260px;
