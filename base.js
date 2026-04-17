@@ -26,7 +26,7 @@ function initNavigation() {
                             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="guess.html">Guess Game</a></li>
                             <li class="nav-item"><a class="nav-link" href="moments.html">Moments</a></li>
-                            <li class="nav-item"><a class="nav-link" href="Page1.html">Quiz</a></li>
+                            <li class="nav-item"><a class="nav-link" href="quizTemplateTest.html">Quiz Template Display</a></li>
                         </ul>
                         <div class="d-flex align-items-center">
                             <button id="themeToggle" class="btn btn-outline-light btn-sm">Toggle Theme</button>
