@@ -46,7 +46,7 @@ const questions = [
     },
     {
         question: "how do you spell question",
-        choices: ["quetin", "kwestin", "question", "bruh"],
+        choices: ["quetin", "kwestin", "question", "are you serious?"],
         answer: 2
     }
 ];
