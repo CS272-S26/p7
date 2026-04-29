@@ -37,6 +37,17 @@
             75% { transform: translateX(-5px); }
             100% { transform: translateX(0); }
         }
+        /* Custom styles for the guess area */
+        .athlete-guess {
+            max-width: 240px !important;
+            margin-bottom: 0 !important; /* Override global margin from stylesheet.css */
+        }
+        .guess-area {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: space-between;
+        }
     </style>
 </head>
 <body>
@@ -55,7 +66,7 @@
                         <li>I hold the record for the most scoring titles in history (10).</li>
                         <li>I won Defensive Player of the Year in 1988.</li>
                     </ul>
-                    <div class="input-group">
+                    <div class="guess-area">
                         <input type="text" class="form-control athlete-guess" placeholder="Enter name..." data-answer="michael jordan">
                         <button class="btn btn-primary submit-btn" type="button">Guess</button>
                     </div>
@@ -74,7 +85,7 @@
                         <li>First person to win the Lineal Heavyweight title 3 times.</li>
                         <li>I won Olympic Gold in Rome (1960).</li>
                     </ul>
-                    <div class="input-group">
+                    <div class="guess-area">
                         <input type="text" class="form-control athlete-guess" placeholder="Enter name..." data-answer="muhammad ali">
                         <button class="btn btn-primary submit-btn" type="button">Guess</button>
                     </div>
@@ -93,7 +104,7 @@
                         <li>I achieved a Career Golden Slam (all 4 majors + Olympic Gold).</li>
                         <li>I spent 319 weeks at World No. 1.</li>
                     </ul>
-                    <div class="input-group">
+                    <div class="guess-area">
                         <input type="text" class="form-control athlete-guess" placeholder="Enter name..." data-answer="serena williams">
                         <button class="btn btn-primary submit-btn" type="button">Guess</button>
                     </div>
@@ -112,7 +123,7 @@
                         <li>I led Argentina to a World Cup victory in 2022.</li>
                         <li>I set a world record by scoring 91 goals in 2012.</li>
                     </ul>
-                    <div class="input-group">
+                    <div class="guess-area">
                         <input type="text" class="form-control athlete-guess" placeholder="Enter name..." data-answer="lionel messi">
                         <button class="btn btn-primary submit-btn" type="button">Guess</button>
                     </div>
@@ -131,7 +142,7 @@
                         <li>I won 8 Gold medals in a single Olympics (Beijing 2008).</li>
                         <li>I have broken 39 world records.</li>
                     </ul>
-                    <div class="input-group">
+                    <div class="guess-area">
                         <input type="text" class="form-control athlete-guess" placeholder="Enter name..." data-answer="michael phelps">
                         <button class="btn btn-primary submit-btn" type="button">Guess</button>
                     </div>
@@ -150,7 +161,7 @@
                         <li>I won 9 MVP awards, including 8 in a row.</li>
                         <li>I am the only player to total 200 points in a season.</li>
                     </ul>
-                    <div class="input-group">
+                    <div class="guess-area">
                         <input type="text" class="form-control athlete-guess" placeholder="Enter name..." data-answer="wayne gretzky">
                         <button class="btn btn-primary submit-btn" type="button">Guess</button>
                     </div>
@@ -169,7 +180,7 @@
                         <li>I won the "Triple-Double" in three consecutive Olympics.</li>
                         <li>I am undefeated in individual Olympic finals.</li>
                     </ul>
-                    <div class="input-group">
+                    <div class="guess-area">
                         <input type="text" class="form-control athlete-guess" placeholder="Enter name..." data-answer="usain bolt">
                         <button class="btn btn-primary submit-btn" type="button">Guess</button>
                     </div>
@@ -188,7 +199,7 @@
                         <li>I have 5 different skills named after me.</li>
                         <li>I have maintained peak dominance well into my late 20s.</li>
                     </ul>
-                    <div class="input-group">
+                    <div class="guess-area">
                         <input type="text" class="form-control athlete-guess" placeholder="Enter name..." data-answer="simone biles">
                         <button class="btn btn-primary submit-btn" type="button">Guess</button>
                     </div>
@@ -207,7 +218,7 @@
                         <li>I achieved the "Tiger Slam" by holding all 4 majors at once.</li>
                         <li>I revolutionized the fitness and marketing of my sport.</li>
                     </ul>
-                    <div class="input-group">
+                    <div class="guess-area">
                         <input type="text" class="form-control athlete-guess" placeholder="Enter name..." data-answer="tiger woods">
                         <button class="btn btn-primary submit-btn" type="button">Guess</button>
                     </div>
