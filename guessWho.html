@@ -22,9 +22,24 @@
             margin-bottom: 25px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .hint-btn {
+            margin-bottom: 15px;
+            font-size: 0.85rem;
+            padding: 5px 10px;
+        }
+        .hint-text {
+            font-size: 0.85rem;
+            font-style: italic;
+            color: #555;
+            min-height: 20px;
+            margin-top: 10px;
+            margin-bottom: 15px;
         }
         .clues-list {
-            min-height: 120px;
+            min-height: 100px;
             font-size: 0.9rem;
         }
         .shake {
@@ -39,14 +54,15 @@
         }
         /* Custom styles for the guess area */
         .athlete-guess {
-            max-width: 240px !important;
-            margin-bottom: 0 !important; /* Override global margin from stylesheet.css */
+            max-width: 200px !important;
+            margin-bottom: 0 !important;
         }
         .guess-area {
             display: flex;
             gap: 10px;
             align-items: center;
             justify-content: space-between;
+            margin-top: auto;
         }
     </style>
 </head>
@@ -60,12 +76,14 @@
             <div class="card">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Michael_Jordan_in_2014.jpg" class="card-img-top athlete-img" alt="Athlete">
                 <div class="card-body">
+                    <button class="btn btn-outline-secondary hint-btn w-100" type="button">Get Hint</button>
                     <h5 class="card-title">Athlete #1</h5>
                     <ul class="clues-list">
                         <li>I won 6 NBA Championships and was Finals MVP every time.</li>
                         <li>I hold the record for the most scoring titles in history (10).</li>
                         <li>I won Defensive Player of the Year in 1988.</li>
                     </ul>
+                    <p class="hint-text"></p>
                     <div class="guess-area">
                         <input type="text" class="form-control athlete-guess" placeholder="Enter name..." data-answer="michael jordan">
                         <button class="btn btn-primary submit-btn" type="button">Guess</button>
@@ -79,12 +97,14 @@
             <div class="card">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Muhammad_Ali_NYWTS.jpg" class="card-img-top athlete-img" alt="Athlete">
                 <div class="card-body">
+                    <button class="btn btn-outline-secondary hint-btn w-100" type="button">Get Hint</button>
                     <h5 class="card-title">Athlete #2</h5>
                     <ul class="clues-list">
                         <li>Known as "The Greatest" with a "float like a butterfly" style.</li>
                         <li>First person to win the Lineal Heavyweight title 3 times.</li>
                         <li>I won Olympic Gold in Rome (1960).</li>
                     </ul>
+                    <p class="hint-text"></p>
                     <div class="guess-area">
                         <input type="text" class="form-control athlete-guess" placeholder="Enter name..." data-answer="muhammad ali">
                         <button class="btn btn-primary submit-btn" type="button">Guess</button>
@@ -98,12 +118,14 @@
             <div class="card">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Serena_Williams_at_the_2013_US_Open_2.jpg" class="card-img-top athlete-img" alt="Athlete">
                 <div class="card-body">
+                    <button class="btn btn-outline-secondary hint-btn w-100" type="button">Get Hint</button>
                     <h5 class="card-title">Athlete #3</h5>
                     <ul class="clues-list">
                         <li>I have 23 Grand Slam Singles Titles (Open Era record).</li>
                         <li>I achieved a Career Golden Slam (all 4 majors + Olympic Gold).</li>
                         <li>I spent 319 weeks at World No. 1.</li>
                     </ul>
+                    <p class="hint-text"></p>
                     <div class="guess-area">
                         <input type="text" class="form-control athlete-guess" placeholder="Enter name..." data-answer="serena williams">
                         <button class="btn btn-primary submit-btn" type="button">Guess</button>
@@ -117,12 +139,14 @@
             <div class="card">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Lionel_Messi_20180626.jpg" class="card-img-top athlete-img" alt="Athlete">
                 <div class="card-body">
+                    <button class="btn btn-outline-secondary hint-btn w-100" type="button">Get Hint</button>
                     <h5 class="card-title">Athlete #4</h5>
                     <ul class="clues-list">
                         <li>I have won a record 8 Ballon d'Or awards.</li>
                         <li>I led Argentina to a World Cup victory in 2022.</li>
                         <li>I set a world record by scoring 91 goals in 2012.</li>
                     </ul>
+                    <p class="hint-text"></p>
                     <div class="guess-area">
                         <input type="text" class="form-control athlete-guess" placeholder="Enter name..." data-answer="lionel messi">
                         <button class="btn btn-primary submit-btn" type="button">Guess</button>
@@ -136,12 +160,14 @@
             <div class="card">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Michael_Phelps_1_OT_2008.jpg" class="card-img-top athlete-img" alt="Athlete">
                 <div class="card-body">
+                    <button class="btn btn-outline-secondary hint-btn w-100" type="button">Get Hint</button>
                     <h5 class="card-title">Athlete #5</h5>
                     <ul class="clues-list">
                         <li>I am the most decorated Olympian of all time with 28 medals.</li>
                         <li>I won 8 Gold medals in a single Olympics (Beijing 2008).</li>
                         <li>I have broken 39 world records.</li>
                     </ul>
+                    <p class="hint-text"></p>
                     <div class="guess-area">
                         <input type="text" class="form-control athlete-guess" placeholder="Enter name..." data-answer="michael phelps">
                         <button class="btn btn-primary submit-btn" type="button">Guess</button>
@@ -155,12 +181,14 @@
             <div class="card">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Wayne_Gretzky_2006.jpg" class="card-img-top athlete-img" alt="Athlete">
                 <div class="card-body">
+                    <button class="btn btn-outline-secondary hint-btn w-100" type="button">Get Hint</button>
                     <h5 class="card-title">Athlete #6</h5>
                     <ul class="clues-list">
                         <li>"The Great One": I have more assists than anyone else has total points.</li>
                         <li>I won 9 MVP awards, including 8 in a row.</li>
                         <li>I am the only player to total 200 points in a season.</li>
                     </ul>
+                    <p class="hint-text"></p>
                     <div class="guess-area">
                         <input type="text" class="form-control athlete-guess" placeholder="Enter name..." data-answer="wayne gretzky">
                         <button class="btn btn-primary submit-btn" type="button">Guess</button>
@@ -174,12 +202,14 @@
             <div class="card">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Usain_Bolt_after_4_x_100_m_final_2015_Beijing.jpg" class="card-img-top athlete-img" alt="Athlete">
                 <div class="card-body">
+                    <button class="btn btn-outline-secondary hint-btn w-100" type="button">Get Hint</button>
                     <h5 class="card-title">Athlete #7</h5>
                     <ul class="clues-list">
                         <li>The fastest human ever, holding the 100m and 200m world records.</li>
                         <li>I won the "Triple-Double" in three consecutive Olympics.</li>
                         <li>I am undefeated in individual Olympic finals.</li>
                     </ul>
+                    <p class="hint-text"></p>
                     <div class="guess-area">
                         <input type="text" class="form-control athlete-guess" placeholder="Enter name..." data-answer="usain bolt">
                         <button class="btn btn-primary submit-btn" type="button">Guess</button>
@@ -193,12 +223,14 @@
             <div class="card">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Simone_Biles_Rio_2016.jpg" class="card-img-top athlete-img" alt="Athlete">
                 <div class="card-body">
+                    <button class="btn btn-outline-secondary hint-btn w-100" type="button">Get Hint</button>
                     <h5 class="card-title">Athlete #8</h5>
                     <ul class="clues-list">
                         <li>The most decorated gymnast in history with 30+ medals.</li>
                         <li>I have 5 different skills named after me.</li>
                         <li>I have maintained peak dominance well into my late 20s.</li>
                     </ul>
+                    <p class="hint-text"></p>
                     <div class="guess-area">
                         <input type="text" class="form-control athlete-guess" placeholder="Enter name..." data-answer="simone biles">
                         <button class="btn btn-primary submit-btn" type="button">Guess</button>
@@ -212,12 +244,14 @@
             <div class="card">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Tiger_Woods_13.06.2018.jpg" class="card-img-top athlete-img" alt="Athlete">
                 <div class="card-body">
+                    <button class="btn btn-outline-secondary hint-btn w-100" type="button">Get Hint</button>
                     <h5 class="card-title">Athlete #9</h5>
                     <ul class="clues-list">
                         <li>I won 15 Major Championships and have 82 PGA Tour wins.</li>
                         <li>I achieved the "Tiger Slam" by holding all 4 majors at once.</li>
                         <li>I revolutionized the fitness and marketing of my sport.</li>
                     </ul>
+                    <p class="hint-text"></p>
                     <div class="guess-area">
                         <input type="text" class="form-control athlete-guess" placeholder="Enter name..." data-answer="tiger woods">
                         <button class="btn btn-primary submit-btn" type="button">Guess</button>
