@@ -11,18 +11,21 @@
             width: 100%;
             height: 250px;
             object-fit: cover;
-            filter: blur(20px);
+            filter: blur(25px);
             transition: filter 0.5s ease;
+            background-color: #f0f0f0;
         }
         .revealed {
             filter: blur(0) !important;
         }
         .card {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            height: 100%;
         }
         .clues-list {
-            min-height: 80px;q
+            min-height: 120px;
+            font-size: 0.9rem;
         }
         .shake {
             animation: shake 0.5s;
@@ -38,52 +41,174 @@
 </head>
 <body>
 <header></header>
-<div class="container">
+<div class="container py-5">
     <h1 class="text-center mb-5">Legendary Athletes: Guess Who?</h1>
-    <div class="row justify-content-center">
+    <div class="row g-4">
+        <!-- 1. Michael Jordan -->
         <div class="col-md-4">
-            <div class="card" id="athlete-1">
-                <img src="" class="card-img-top athlete-img" alt="Athlete 1">
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Michael_Jordan_in_2014.jpg" class="card-img-top athlete-img" alt="Athlete">
                 <div class="card-body">
                     <h5 class="card-title">Athlete #1</h5>
                     <ul class="clues-list">
-                        <li>I won 6 NBA championships.</li>
-                        <li>I played for the Chicago Bulls.</li>
+                        <li>I won 6 NBA Championships and was Finals MVP every time.</li>
+                        <li>I hold the record for the most scoring titles in history (10).</li>
+                        <li>I won Defensive Player of the Year in 1988.</li>
                     </ul>
-                    <div class="input-group mb-3">
+                    <div class="input-group">
                         <input type="text" class="form-control athlete-guess" placeholder="Enter name..." data-answer="michael jordan">
                         <button class="btn btn-primary submit-btn" type="button">Guess</button>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- 2. Muhammad Ali -->
         <div class="col-md-4">
-            <div class="card" id="athlete-2">
-                <img src="" class="card-img-top athlete-img" alt="Athlete 2">
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Muhammad_Ali_NYWTS.jpg" class="card-img-top athlete-img" alt="Athlete">
                 <div class="card-body">
                     <h5 class="card-title">Athlete #2</h5>
                     <ul class="clues-list">
-                        <li>I have 23 Grand Slam singles titles.</li>
-                        <li>I have won 4 Olympic gold medals.</li>
+                        <li>Known as "The Greatest" with a "float like a butterfly" style.</li>
+                        <li>First person to win the Lineal Heavyweight title 3 times.</li>
+                        <li>I won Olympic Gold in Rome (1960).</li>
                     </ul>
-                    <div class="input-group mb-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control athlete-guess" placeholder="Enter name..." data-answer="muhammad ali">
+                        <button class="btn btn-primary submit-btn" type="button">Guess</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Serena Williams -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Serena_Williams_at_the_2013_US_Open_2.jpg" class="card-img-top athlete-img" alt="Athlete">
+                <div class="card-body">
+                    <h5 class="card-title">Athlete #3</h5>
+                    <ul class="clues-list">
+                        <li>I have 23 Grand Slam Singles Titles (Open Era record).</li>
+                        <li>I achieved a Career Golden Slam (all 4 majors + Olympic Gold).</li>
+                        <li>I spent 319 weeks at World No. 1.</li>
+                    </ul>
+                    <div class="input-group">
                         <input type="text" class="form-control athlete-guess" placeholder="Enter name..." data-answer="serena williams">
                         <button class="btn btn-primary submit-btn" type="button">Guess</button>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- 4. Lionel Messi -->
         <div class="col-md-4">
-            <div class="card" id="athlete-3">
-                <img src="" class="card-img-top athlete-img" alt="Athlete 3">
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Lionel_Messi_20180626.jpg" class="card-img-top athlete-img" alt="Athlete">
                 <div class="card-body">
-                    <h5 class="card-title">Athlete #3</h5>
+                    <h5 class="card-title">Athlete #4</h5>
                     <ul class="clues-list">
+                        <li>I have won a record 8 Ballon d'Or awards.</li>
                         <li>I led Argentina to a World Cup victory in 2022.</li>
-                        <li>I have won 8 Ballon d'Or awards.</li>
+                        <li>I set a world record by scoring 91 goals in 2012.</li>
                     </ul>
-                    <div class="input-group mb-3">
+                    <div class="input-group">
                         <input type="text" class="form-control athlete-guess" placeholder="Enter name..." data-answer="lionel messi">
+                        <button class="btn btn-primary submit-btn" type="button">Guess</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. Michael Phelps -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Michael_Phelps_1_OT_2008.jpg" class="card-img-top athlete-img" alt="Athlete">
+                <div class="card-body">
+                    <h5 class="card-title">Athlete #5</h5>
+                    <ul class="clues-list">
+                        <li>I am the most decorated Olympian of all time with 28 medals.</li>
+                        <li>I won 8 Gold medals in a single Olympics (Beijing 2008).</li>
+                        <li>I have broken 39 world records.</li>
+                    </ul>
+                    <div class="input-group">
+                        <input type="text" class="form-control athlete-guess" placeholder="Enter name..." data-answer="michael phelps">
+                        <button class="btn btn-primary submit-btn" type="button">Guess</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. Wayne Gretzky -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Wayne_Gretzky_2006.jpg" class="card-img-top athlete-img" alt="Athlete">
+                <div class="card-body">
+                    <h5 class="card-title">Athlete #6</h5>
+                    <ul class="clues-list">
+                        <li>"The Great One": I have more assists than anyone else has total points.</li>
+                        <li>I won 9 MVP awards, including 8 in a row.</li>
+                        <li>I am the only player to total 200 points in a season.</li>
+                    </ul>
+                    <div class="input-group">
+                        <input type="text" class="form-control athlete-guess" placeholder="Enter name..." data-answer="wayne gretzky">
+                        <button class="btn btn-primary submit-btn" type="button">Guess</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. Usain Bolt -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Usain_Bolt_after_4_x_100_m_final_2015_Beijing.jpg" class="card-img-top athlete-img" alt="Athlete">
+                <div class="card-body">
+                    <h5 class="card-title">Athlete #7</h5>
+                    <ul class="clues-list">
+                        <li>The fastest human ever, holding the 100m and 200m world records.</li>
+                        <li>I won the "Triple-Double" in three consecutive Olympics.</li>
+                        <li>I am undefeated in individual Olympic finals.</li>
+                    </ul>
+                    <div class="input-group">
+                        <input type="text" class="form-control athlete-guess" placeholder="Enter name..." data-answer="usain bolt">
+                        <button class="btn btn-primary submit-btn" type="button">Guess</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 8. Simone Biles -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Simone_Biles_Rio_2016.jpg" class="card-img-top athlete-img" alt="Athlete">
+                <div class="card-body">
+                    <h5 class="card-title">Athlete #8</h5>
+                    <ul class="clues-list">
+                        <li>The most decorated gymnast in history with 30+ medals.</li>
+                        <li>I have 5 different skills named after me.</li>
+                        <li>I have maintained peak dominance well into my late 20s.</li>
+                    </ul>
+                    <div class="input-group">
+                        <input type="text" class="form-control athlete-guess" placeholder="Enter name..." data-answer="simone biles">
+                        <button class="btn btn-primary submit-btn" type="button">Guess</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 9. Tiger Woods -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Tiger_Woods_13.06.2018.jpg" class="card-img-top athlete-img" alt="Athlete">
+                <div class="card-body">
+                    <h5 class="card-title">Athlete #9</h5>
+                    <ul class="clues-list">
+                        <li>I won 15 Major Championships and have 82 PGA Tour wins.</li>
+                        <li>I achieved the "Tiger Slam" by holding all 4 majors at once.</li>
+                        <li>I revolutionized the fitness and marketing of my sport.</li>
+                    </ul>
+                    <div class="input-group">
+                        <input type="text" class="form-control athlete-guess" placeholder="Enter name..." data-answer="tiger woods">
                         <button class="btn btn-primary submit-btn" type="button">Guess</button>
                     </div>
                 </div>
