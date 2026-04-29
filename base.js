@@ -24,7 +24,7 @@ function initNavigation() {
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav me-auto">
                             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="guess.html">Guess Game</a></li>
+                            <li class="nav-item"><a class="nav-link" href="guessWho.html">Guess Game</a></li>
                             <li class="nav-item"><a class="nav-link" href="moments.html">Moments</a></li>
                             <li class="nav-item"><a class="nav-link" href="quizTemplateTest.html">Quiz Template Display</a></li>
                         </ul>
