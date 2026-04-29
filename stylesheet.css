@@ -155,3 +155,230 @@ button:hover {
     color: white;
     border: 1px solid #444;
 }
+
+/* --- Sports Showcase Specific Styles --- */
+
+.showcase-section {
+    margin-bottom: 60px;
+    padding: 20px;
+}
+
+.showcase-section h2 {
+    border-bottom: 2px solid #2f5577;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    color: #2f5577;
+}
+
+/* Sports Grid (Horizontal Scroll) */
+.horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px 0 30px 0;
+    scrollbar-width: thin;
+    scrollbar-color: #2f5577 #e8e8e8;
+}
+
+.sport-card {
+    min-width: 200px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.sport-card:hover {
+    transform: scale(1.05);
+}
+
+.sport-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.sport-name-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Athlete Hologram Card */
+.search-controls {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#player-search-input {
+    width: 350px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    padding: 12px 20px;
+}
+
+#player-search-btn {
+    border-radius: 20px;
+    background-color: #2f5577;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+}
+
+.hologram-card {
+    position: relative;
+    max-width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.hologram-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px) brightness(0.6);
+    transform: scale(1.1);
+}
+
+.hologram-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+}
+
+.hologram-cutout {
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 20px rgba(255,255,255,0.4));
+    z-index: 2;
+    transition: transform 0.4s ease;
+}
+
+.hologram-card:hover .hologram-cutout {
+    transform: scale(1.1) translateY(-10px);
+}
+
+.player-info {
+    flex: 1;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.2);
+    margin-left: -50px; /* Slight overlap for 3D effect */
+}
+
+.player-info h3 {
+    font-size: 28px;
+    margin-top: 0;
+}
+
+/* Global League Banner */
+.league-banner-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.league-banner {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.league-badge {
+    position: absolute;
+    bottom: -30px;
+    left: 40px;
+    width: 120px;
+    height: 120px;
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    z-index: 5;
+}
+
+.league-details {
+    padding: 20px 40px;
+    background: white;
+    border-radius: 0 0 12px 12px;
+}
+
+.league-details h3 {
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.league-description {
+    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #444;
+}
+
+.multilingual-controls {
+    margin-top: 20px;
+    text-align: right;
+}
+
+#lang-select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #2f5577;
+}
+
+.status-msg, .error-msg {
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+}
+
+.error-msg {
+    color: #d9534f;
+}
+
+/* Dark mode compatibility for new sections */
+[data-theme="dark"] .showcase-section h2 {
+    color: #4da3ff;
+    border-color: #4da3ff;
+}
+
+[data-theme="dark"] .league-details {
+    background: #1e1e1e;
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .league-description {
+    color: #bbb;
+}
