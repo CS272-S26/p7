@@ -3,15 +3,42 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Hint Data for each athlete
     const hintData = {
-        "michael jordan": ["I wore the number 23 for most of my career.", "I starred in the original Space Jam movie."],
-        "muhammad ali": ["My birth name was Cassius Clay.", "I famously refused to be drafted into the Vietnam War."],
-        "serena williams": ["My sister Venus is also a legendary tennis champion.", "I won the 2017 Australian Open while eight weeks pregnant."],
-        "lionel messi": ["I spent the majority of my career playing for FC Barcelona.", "My nickname is 'La Pulga' (The Flea)."],
-        "michael phelps": ["I have a massive 6-foot-7-inch wingspan.", "I am the only athlete to win eight gold medals in one Olympic Games."],
-        "wayne gretzky": ["I played most of my career for the Edmonton Oilers and LA Kings.", "My jersey number 99 is retired league-wide by the NHL."],
-        "usain bolt": ["I am from Jamaica and known for my lightning bolt pose.", "I holds the world record for the 100m sprint at 9.58 seconds."],
-        "simone biles": ["I am the first female gymnast to land a Yurchenko double pike vault.", "I took a break during the Tokyo 2021 Olympics to prioritize my mental health."],
-        "tiger woods": ["I am the youngest player to ever win the Career Grand Slam in golf.", "I won the 1997 Masters by a record-breaking 12 strokes."]
+        "michael jordan": [
+            "He starred alongside Bugs Bunny in a movie about a high-stakes space basketball game.",
+            "He has his own silhouette on billions of sneakers worldwide."
+        ],
+        "muhammad ali": [
+            "He famously claimed he could \"float like a butterfly and sting like a bee.\"",
+            "He was known as \"The Louisville Lip\" for his poetic and rhythmic trash-talking."
+        ],
+        "serena williams": [
+            "She won the Australian Open in 2017 while she was eight weeks pregnant.",
+            "Her sister is also a world-class tennis champion who has won seven Grand Slams herself."
+        ],
+        "lionel messi": [
+            "He is often nicknamed \"La Pulga\" (The Flea) because of his short height and insane agility.",
+            "He spent nearly his entire professional career wearing the number 10 for Barcelona."
+        ],
+        "michael phelps": [
+            "He has a wingspan of 6'7\", which is actually several inches longer than his actual height.",
+            "He once \"raced\" a Great White Shark for a Discovery Channel special (though it was CGI)."
+        ],
+        "wayne gretzky": [
+            "His jersey number, 99, is the only number retired by every single team in his entire league.",
+            "He has more career assists than any other player has total points."
+        ],
+        "usain bolt": [
+            "He famously ate Chicken McNuggets for almost every meal during the 2008 Beijing Olympics.",
+            "He holds the record for the highest recorded human top speed, clocked at about 27.8 mph."
+        ],
+        "simone biles": [
+            "She is widely referred to by the acronym G.O.A.T., and she often wears a leotard with a literal goat head on it.",
+            "She was the first woman to land a \"Yurchenko double pike\"—a move so hard most men won't try it—in international competition."
+        ],
+        "tiger woods": [
+            "He is named after a Vietnamese colonel who was a close friend of his father during the war.",
+            "He won the 1997 Masters by a record-shattering 12 strokes at just 21 years old."
+        ]
     };
 
     cards.forEach(card => {
@@ -45,13 +72,13 @@ document.addEventListener('DOMContentLoaded', () => {
         hintBtn.addEventListener('click', () => {
             if (hintCount === 0) {
                 if (confirm("Would you like to see the first hint?")) {
-                    hintText.textContent = "Hint 1: " + hintData[correctAnswer][0];
+                    hintText.innerHTML = "Hint 1: " + hintData[correctAnswer][0];
                     hintBtn.textContent = "Get Second Hint";
                     hintCount++;
                 }
             } else if (hintCount === 1) {
                 if (confirm("Would you like to see the second hint?")) {
-                    hintText.textContent = "Hint 2: " + hintData[correctAnswer][1];
+                    hintText.innerHTML += "<br>Hint 2: " + hintData[correctAnswer][1];
                     hintBtn.textContent = "Reveal Answer";
                     hintBtn.classList.remove('btn-outline-secondary');
                     hintBtn.classList.add('btn-outline-warning');
