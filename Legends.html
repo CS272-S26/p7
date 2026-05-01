@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Legends</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+
+<header></header>
+
+<main>
+    <div class="content-box">
+
+        <h2>Sports Legends</h2>
+
+        <p>
+            Throughout history, many athletes have changed their sports forever.
+            Their talent, leadership, and accomplishments made them legends.
+        </p>
+
+        <p>
+            Click the button below to reveal a random sports legend.
+        </p>
+
+        <button onclick="showLegend()">Show Legend</button>
+
+        <p id="legendText" style="margin-top: 25px; font-weight: bold;"></p>
+
+        <h2 style="margin-top: 50px;">Quick Quiz</h2>
+
+        <p>Which athlete is known as "His Airness"?</p>
+
+        <select id="quizAnswer">
+            <option value="">Choose an answer</option>
+            <option value="wrong">Tom Brady</option>
+            <option value="correct">Michael Jordan</option>
+            <option value="wrong">Babe Ruth</option>
+            <option value="wrong">Wayne Gretzky</option>
+        </select>
+
+        <br><br>
+
+        <button onclick="checkAnswer()">Submit Answer</button>
+
+        <p id="quizResult" style="font-weight: bold; margin-top: 20px;"></p>
+
+    </div>
+</main>
+
+<footer></footer>
+
+<script>
+function showLegend() {
+    const legends = [
+        "Michael Jordan - 6-time NBA Champion",
+        "Tom Brady - 7-time Super Bowl Champion",
+        "Wayne Gretzky - NHL all-time points leader",
+        "Serena Williams - Tennis icon and champion",
+        "Babe Ruth - Baseball legend"
+    ];
+
+    const randomLegend = legends[Math.floor(Math.random() * legends.length)];
+    document.getElementById("legendText").innerText = randomLegend;
+}
+
+function checkAnswer() {
+    const answer = document.getElementById("quizAnswer").value;
+    const result = document.getElementById("quizResult");
+
+    if (answer === "correct") {
+        result.innerText = "Correct! Michael Jordan was known as His Airness.";
+    } else if (answer === "") {
+        result.innerText = "Please choose an answer first.";
+    } else {
+        result.innerText = "Incorrect. Try again.";
+    }
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="base.js"></script>
+
+</body>
+</html>
