@@ -25,4 +25,4 @@ Users can explore famous moments in sports, test their knowledge, and learn more
 
 ## Authors
 
-Created by Group P7 for the CS/LIS 472 Final Project.
+Created by Mason Peters, Andy Nguyen and Justin Kvalo
