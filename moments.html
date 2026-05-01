@@ -14,7 +14,7 @@
         <div class="content-box">
             <h2>The Flu Game (1997)</h2>
 
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Michael_Jordan_1997.jpg"
+            <img src="images/FluGamePhoto.jpg"
                  class="img-fluid"
                  alt="Michael Jordan during the 1997 NBA Finals">
 
@@ -34,27 +34,18 @@
                 Jordan hit a clutch three-pointer late in the game and finished with 38 points, even though he barely had the strength to stand.
             </p>
 
-            <h2>Sports History Quiz</h2>
-
-            <label for="quizAnswer">
-                Who did the Chicago Bulls defeat in the 1997 NBA Finals?
-            </label>
-
-            <br><br>
-
-            <select id="quizAnswer">
-                <option value="">Choose an answer</option>
-                <option value="wrong">Los Angeles Lakers</option>
-                <option value="correct">Utah Jazz</option>
-                <option value="wrong">Boston Celtics</option>
-                <option value="wrong">Detroit Pistons</option>
-            </select>
-
-            <br><br>
-
-            <button onclick="checkAnswer()">Submit Answer</button>
+        
 
             <p id="quizResult"></p>
+
+            <p>
+        Would you like to take the quiz to test your new knowledge?
+    </p>
+    <a class="btn btn-primary mt-3" href="momentsQuizPage.html">Take Quiz</a>
+    <p>
+      
+
+    </p>
         </div>
     </main>
 
@@ -64,20 +55,9 @@
         function showFact() {
             document.getElementById("fact").style.display = "block";
         }
-
-        function checkAnswer() {
-            let answer = document.getElementById("quizAnswer").value;
-            let result = document.getElementById("quizResult");
-
-            if (answer === "correct") {
-                result.innerText = "Correct! The Bulls beat the Utah Jazz in the 1997 NBA Finals.";
-            } else if (answer === "") {
-                result.innerText = "Please choose an answer first.";
-            } else {
-                result.innerText = "Not quite. Try again.";
-            }
-        }
     </script>
+
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="base.js"></script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moments Quiz with Leaderboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <header></header>
+    <h1>Jordans Flu Game Quiz</h1>
+    <div class="box" id="loginBox">
+        <h2>Enter Your Nickname</h2>
+        <input type="text" id="nicknameInput" placeholder="Nickname">
+        <br>
+        <button id="startBtn">Start Quiz</button>
+        <p id="nameError"></p>
+    </div>
+    <div class="box" id="quizBox">
+        <h2 id="welcomeText"></h2>
+        <p id="questionText"></p>
+        <div id="choicesBox"></div>
+        <button id="nextBtn">Next</button>
+        <p id="scoreText"></p>
+    </div>
+    <div class="box">
+        <h2>Leaderboard</h2>
+        <ol id="leaderboardList"></ol>
+    </div>
+    <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="momentsQuiz.js"></script>
+    <script src="base.js"></script>
+</body>
+</html>
