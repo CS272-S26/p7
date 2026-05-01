@@ -10,6 +10,15 @@ body {
     flex-direction: column;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: #f1f5f9;
+    font-family: 'Oswald', sans-serif;
+}
+
+p {
+    color: #cbd5e1;
+}
+
 header {
     background: linear-gradient(135deg, #1e293b, #0f172a);
     color: white;
@@ -54,10 +63,10 @@ main {
     padding: 40px 20px;
 }
 
-.content-box {
+.content-box, .box {
     background: linear-gradient(145deg, #1e293b, #111827);
     max-width: 900px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 50px 60px;
     border-radius: 16px;
     text-align: center;
@@ -65,7 +74,7 @@ main {
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.content-box h2 {
+.content-box h2, .box h2 {
     font-family: 'Oswald', sans-serif;
     font-size: 32px;
     margin-top: 0;
@@ -75,11 +84,15 @@ main {
     letter-spacing: 1px;
 }
 
-.content-box p {
+.content-box p, .box p {
     font-size: 18px;
     line-height: 1.8;
     margin-bottom: 30px;
     color: #94a3b8;
+}
+
+.box {
+    padding: 30px 40px;
 }
 
 footer {
@@ -528,17 +541,69 @@ button:hover {
 .card {
     background-color: #1e293b !important;
     border: 1px solid #334155 !important;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4) !important;
 }
 .card-title {
     color: #38bdf8 !important;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
 }
-.card-text {
-    color: #94a3b8 !important;
+.card-text, .card-body {
+    color: #cbd5e1 !important;
 }
 .list-group-item {
     background-color: #1e293b !important;
     color: #e2e8f0 !important;
     border-color: #334155 !important;
+}
+
+/* Form Elements */
+select {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #1e293b;
+    color: #f1f5f9;
+    border: 1px solid #334155;
+    font-family: 'Inter', sans-serif;
+}
+
+option {
+    background-color: #1e293b;
+    color: #f1f5f9;
+}
+
+.hint-btn, .btn-outline-secondary {
+    color: #f1f5f9 !important;
+    border-color: #475569 !important;
+}
+
+.hint-btn:hover, .btn-outline-secondary:hover {
+    background-color: rgba(56, 189, 248, 0.2) !important;
+    color: #fff !important;
+    border-color: #38bdf8 !important;
+}
+
+/* Guess Who Game Specifics */
+.hint-text {
+    color: #94a3b8 !important;
+}
+.clues-list {
+    color: #cbd5e1 !important;
+}
+.clues-list li {
+    margin-bottom: 8px;
+}
+.athlete-img {
+    background-color: #0f172a !important;
+    border-bottom: 2px solid #38bdf8;
+}
+.form-control {
+    background-color: #1e293b !important;
+    border: 1px solid #334155 !important;
+    color: #f1f5f9 !important;
+}
+.form-control::placeholder {
+    color: #64748b !important;
 }
 
 @media (max-width: 768px) {

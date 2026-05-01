@@ -9,25 +9,28 @@
 </head>
 <body>
     <header></header>
-    <div class="box" id="loginBox">
-        <h1>History of the Soccer Cease Fire Quiz</h1>
-        <h2>Enter Your Nickname</h2>
-        <input type="text" id="nicknameInput" placeholder="Nickname">
-        <br>
-        <button id="startBtn">Start Quiz</button>
-        <p id="nameError"></p>
-    </div>
-    <div class="box" id="quizBox">
-        <h2 id="welcomeText"></h2>
-        <p id="questionText"></p>
-        <div id="choicesBox"></div>
-        <button id="nextBtn">Next</button>
-        <p id="scoreText"></p>
-    </div>
-    <div class="box">
-        <h2>Leaderboard</h2>
-        <ol id="leaderboardList"></ol>
-    </div>
+    <main class="container py-4">
+        <div class="box" id="loginBox">
+            <h1>History of the Soccer Cease Fire Quiz</h1>
+            <h2 class="mt-4">Enter Your Nickname</h2>
+            <input type="text" id="nicknameInput" class="form-control mx-auto mb-3" style="max-width: 300px;" placeholder="Nickname">
+            <button id="startBtn" class="btn btn-primary">Start Quiz</button>
+            <p id="nameError" class="text-danger mt-2"></p>
+        </div>
+        
+        <div class="box" id="quizBox">
+            <h2 id="welcomeText"></h2>
+            <p id="questionText" class="fs-4 mb-4"></p>
+            <div id="choicesBox"></div>
+            <button id="nextBtn" class="btn btn-success mt-4">Next Question</button>
+            <p id="scoreText" class="mt-4"></p>
+        </div>
+
+        <div class="box mt-5">
+            <h2 class="border-bottom pb-3 mb-4">Leaderboard</h2>
+            <ol id="leaderboardList" class="text-start"></ol>
+        </div>
+    </main>
     <footer></footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="soccerCeaseFireQuiz.js"></script>

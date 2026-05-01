@@ -3,43 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <title>Historic Moments - The Christmas Truce</title>
-  <link rel="stylesheet" href="stylesheet.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
   <header></header>
-  <div class="container mt-4">
-    <h1>The Christmas Truce (1997)</h1>
-    <img src="images/ChristmasTruce.png" 
-         class="img-fluid" 
-         alt="WW1 Christmas Soccer Truce">
-    <p class="mt-3">
-      One of the most memorable soccer stories in history happened during the Christmas Truce of 1914 in World War I. Around Christmas, some British and German soldiers on the Western Front stopped fighting for a short time and climbed out of their trenches. They met in the dangerous area between the trenches known as “No Man’s Land.”
-    </p>
-    <p>
-      During the truce, soldiers exchanged small gifts, sang Christmas songs, talked with each other, and in some places played informal games of soccer. These games were not official matches, but they became a powerful symbol of how sports can bring people together, even during war.
-    </p>
-    <p>
-        The Christmas soccer game is remembered because it showed the human side of soldiers who were supposed to be enemies. Although the truce did not last long and the fighting continued afterward, the story remains an important moment in both war history and sports history. It shows that soccer has the power to connect people across countries, languages, and conflict.
-    </p>
-    <button class="btn btn-primary mt-3" onclick="showFact()">Reveal Crazy Fact</button>
-    <p id="fact" class="mt-3" style="display:none;">
-      It's estimated that nearly 100,000 soldiers took part in this Christmas Truce.
-    </p>
-    <p>
-
-    </p>
-    <p>
-        Would you like to take the quiz to test your new knowledge?
-    </p>
-    <a class="btn btn-primary mt-3" href="soccerCeaseQuiz.html">Take Quiz</a>
-    <p>
+  
+  <main class="container py-4">
+    <div class="content-box">
+      <h1>The Christmas Truce (1914)</h1>
+      <img src="images/ChristmasTruce.png" 
+           class="img-fluid rounded mb-4 shadow" 
+           alt="WW1 Christmas Soccer Truce"
+           style="border: 1px solid rgba(56, 189, 248, 0.3);">
       
+      <p>
+        One of the most memorable soccer stories in history happened during the Christmas Truce of 1914 in World War I. Around Christmas, some British and German soldiers on the Western Front stopped fighting for a short time and climbed out of their trenches. They met in the dangerous area between the trenches known as “No Man’s Land.”
+      </p>
+      
+      <p>
+        During the truce, soldiers exchanged small gifts, sang Christmas songs, talked with each other, and in some places played informal games of soccer. These games were not official matches, but they became a powerful symbol of how sports can bring people together, even during war.
+      </p>
+      
+      <p>
+          The Christmas soccer game is remembered because it showed the human side of soldiers who were supposed to be enemies. Although the truce did not last long and the fighting continued afterward, the story remains an important moment in both war history and sports history. It shows that soccer has the power to connect people across countries, languages, and conflict.
+      </p>
+      
+      <button onclick="showFact()">Reveal Crazy Fact</button>
+      
+      <p id="fact" class="mt-4 fw-bold text-info" style="display:none;">
+        It's estimated that nearly 100,000 soldiers took part in this Christmas Truce.
+      </p>
+      
+      <div class="mt-5 pt-4 border-top border-secondary">
+          <p>Would you like to take the quiz to test your new knowledge?</p>
+          <a class="btn btn-primary btn-lg" href="soccerCeaseQuiz.html">Take Quiz</a>
+      </div>
+    </div>
+  </main>
 
-    </p>
-
-  </div>
   <footer></footer>
+
+  <script>
+      function showFact() {
+          document.getElementById("fact").style.display = "block";
+      }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="base.js"></script>
 </body>
 </html>
