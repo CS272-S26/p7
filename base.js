@@ -7,40 +7,27 @@ function initNavigation() {
     const header = document.querySelector('header') || document.body;
     if (document.querySelector('.global-nav')) return;
 
-    const currentPath = window.location.pathname.split("/").pop() || 'index.html';
-    const isHomePage = currentPath === 'index.html' || currentPath === '';
-
-    let navHTML = '';
-
-    if (isHomePage) {
-        navHTML = `
-            <nav class="navbar navbar-expand-lg navbar-dark global-nav" style="background: linear-gradient(90deg, #1e293b, #0f172a);">
-                <div class="container-fluid">
-                    <a class="navbar-brand fw-bold text-uppercase" href="index.html" style="letter-spacing: 1px; color: #38bdf8;">Sports Hub</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav me-auto">
-                            <li class="nav-item"><a class="nav-link" href="guessWho.html">Guess Game</a></li>
-                            <li class="nav-item"><a class="nav-link" href="moments.html">The Flu Game</a></li>
-                            <li class="nav-item"><a class="nav-link" href="soccerCeaseFirePage.html">Christmas Truce</a></li>
-                            <li class="nav-item"><a class="nav-link" href="sports-showcase.html">Sports Showcase</a></li>
-                            <li class="nav-item"><a class="nav-link" href="Legends.html">Legends</a></li>
-                        </ul>
-                    </div>
+    const navHTML = `
+        <nav class="navbar navbar-expand-lg navbar-dark global-nav" style="background: linear-gradient(90deg, #1e293b, #0f172a);">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold text-uppercase" href="index.html" style="letter-spacing: 1px; color: #38bdf8;">Sports Hub</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="guessWho.html">Guess Game</a></li>
+                        <li class="nav-item"><a class="nav-link" href="moments.html">The Flu Game</a></li>
+                        <li class="nav-item"><a class="nav-link" href="soccerCeaseFirePage.html">Christmas Truce</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sports-showcase.html">Sports Showcase</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Legends.html">Legends</a></li>
+                        <li class="nav-item"><a class="nav-link" href="quizTemplateTest.html">Quiz Template Test</a></li>
+                    </ul>
                 </div>
-            </nav>
-        `;
-    } else {
-        navHTML = `
-            <nav class="navbar navbar-expand-lg navbar-dark global-nav" style="background: linear-gradient(90deg, #1e293b, #0f172a);">
-                <div class="container-fluid">
-                    <a class="btn btn-outline-info" href="index.html">← Back to Home</a>
-                </div>
-            </nav>
-        `;
-    }
+            </div>
+        </nav>
+    `;
 
     if (header.tagName === 'HEADER') {
         const existingNav = header.querySelector('nav');
