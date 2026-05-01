@@ -28,7 +28,7 @@ function initNavigation() {
                             <li class="nav-item"><a class="nav-link" href="moments.html">Moments</a></li>
                             <li class="nav-item"><a class="nav-link" href="quizTemplateTest.html">Quiz Template Display</a></li>
                             <li class="nav-item"><a class="nav-link" href="sports-showcase.html">Sports Showcase</a></li>
-                            <li class="nav-item"><a class="nav-link" href="legends.html">Legends</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Legends.html">Legends</a></li>
                         </ul>
                         <div class="d-flex align-items-center">
                             <button id="themeToggle" class="btn btn-outline-light btn-sm">Toggle Theme</button>
