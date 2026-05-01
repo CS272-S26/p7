@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log("Base JS loaded - initializing global components.");
     initNavigation();
     initFooter();
-    initThemeToggle();
 });
 function initNavigation() {
     const header = document.querySelector('header') || document.body;
@@ -15,9 +14,9 @@ function initNavigation() {
 
     if (isHomePage) {
         navHTML = `
-            <nav class="navbar navbar-expand-lg navbar-dark global-nav">
+            <nav class="navbar navbar-expand-lg navbar-dark global-nav" style="background: linear-gradient(90deg, #1e293b, #0f172a);">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html">Sports Hub</a>
+                    <a class="navbar-brand fw-bold text-uppercase" href="index.html" style="letter-spacing: 1px; color: #38bdf8;">Sports Hub</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -29,21 +28,15 @@ function initNavigation() {
                             <li class="nav-item"><a class="nav-link" href="sports-showcase.html">Sports Showcase</a></li>
                             <li class="nav-item"><a class="nav-link" href="Legends.html">Legends</a></li>
                         </ul>
-                        <div class="d-flex align-items-center">
-                            <button id="themeToggle" class="btn btn-outline-light btn-sm">Toggle Theme</button>
-                        </div>
                     </div>
                 </div>
             </nav>
         `;
     } else {
         navHTML = `
-            <nav class="navbar navbar-expand-lg navbar-dark global-nav">
+            <nav class="navbar navbar-expand-lg navbar-dark global-nav" style="background: linear-gradient(90deg, #1e293b, #0f172a);">
                 <div class="container-fluid">
-                    <a class="btn btn-outline-light" href="index.html">← Back to Home</a>
-                    <div class="ms-auto d-flex align-items-center">
-                        <button id="themeToggle" class="btn btn-outline-light btn-sm">Toggle Theme</button>
-                    </div>
+                    <a class="btn btn-outline-info" href="index.html">← Back to Home</a>
                 </div>
             </nav>
         `;
@@ -82,16 +75,4 @@ function initFooter() {
             </div>
         `;
     }
-}
-function initThemeToggle() {
-    const toggleBtn = document.getElementById('themeToggle');
-    if (!toggleBtn) return;
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    document.body.setAttribute('data-theme', currentTheme);
-    toggleBtn.addEventListener('click', () => {
-        const newTheme = document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-        document.body.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        console.log(`Theme switched to: ${newTheme}`);
-    });
 }
