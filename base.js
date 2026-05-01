@@ -22,7 +22,6 @@ function initNavigation() {
                         <li class="nav-item"><a class="nav-link" href="soccerCeaseFirePage.html">Christmas Truce</a></li>
                         <li class="nav-item"><a class="nav-link" href="sports-showcase.html">Sports Showcase</a></li>
                         <li class="nav-item"><a class="nav-link" href="Legends.html">Legends</a></li>
-                        <li class="nav-item"><a class="nav-link" href="quizTemplateTest.html">Quiz Template Test</a></li>
                     </ul>
                 </div>
             </div>
